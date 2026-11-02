@@ -1,5 +1,5 @@
 import cv2
-from collections import deque
+# from collections import deque
 import ollama
 import sounddevice as sd
 import numpy as np
@@ -97,7 +97,7 @@ latest_frame = None
 detected_objects = []
 
 # Remember the last 5 seconds of camera frames
-frame_buffer = deque(maxlen=150)
+ #frame_buffer = deque(maxlen=150)
 
 running = True
 
@@ -151,7 +151,7 @@ def vision_loop():
         detected_objects = list(set(objects))
 
         latest_frame = frame.copy()
-        frame_buffer.append(frame.copy())
+       # frame_buffer.append(frame.copy())
 
         annotated = result.plot()
 
